@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"  href="css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="css/index.css" rel="stylesheet" >
+    </head>
+    <body >
+        <div id="div_principal" class=" container" >
+
+            <div id="principal_1">
+                <div id="div_h1">
+                    <h1>CONTROLE FINANCEIRO</h1>
+                </div>
+                <form>
+
+                    <div class="row align-items-start">
+
+                        <div class="linha">
+                            
+                            <div class="coluna1">
+                            <label >ID </label>
+                            </div>
+
+                            <div class="coluna5">
+                                <span></span>
+                            </div>
+
+                        </div>
+                        <div class="linha">
+                            <div class="coluna1">
+                                <label >DESCRIÇÃO: </label>
+                            </div>
+                            <div class="colunaEspecial">
+                                <input type="text" id="form-descricao">
+                            </div>
+                        </div>
+                        
+                        <div class="linha">
+                            <div class="coluna1">
+                                <label >DATA: </label>
+                            </div>
+                            <div class="coluna2">
+                                <input type="date" id="form-date">
+                            </div>
+                            
+
+                            <div class="coluna3">
+                                <label>TIPO: </label>
+                            </div> 
+                            <DIV class="coluna4">  
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="sel-Motivo">
+                                <option selected>SELECIONE O MOTIVO: </option>
+                                <option value="1">COMPRAS</option>
+                                <option value="2">TRANSPORTE</option>
+                                <option value="3">PAGAMENTO DE SALARIO</option>
+                                <option value="4">MANUTENÇÃO</option>
+                                <option value="5">FORNECEDOR</option>
+                                <option value="6">CONTAS A PAGAR</option>
+                                <option value="7">OUTROS</option>
+                            </select>
+                            </DIV> 
+                            </div>
+
+
+                        </DIV>
+
+                    </DIV>
+
+                    <div class="row align-items-start">
+
+                        <DIV class="linha">
+                            <div class="coluna1">  
+                                <label >VALOR: </label>
+                            </div>
+                            <div class="coluna2">  
+                                <input type="number" id="form-valor">
+                            </div>
+                            <div class="colunaEspecial2">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#mod_fmPagamento" id="btn-fmPagamento">FORMA DE PAGAMENTO</button>
+                            </div>
+                            
+                        </DIV>   
+                    </div>
+                    <div class="row align-items-start">
+
+                        <DIV class="linha">
+                            <div class="coluna1">
+                                <label > OBSERVAÇÃO </label>
+                            </div>
+                            <div class="colunaEspecial">
+                                <input type="text" id="form-observacao">
+                            </div>
+                     
+                        </DIV>    
+
+                    <div class="row align-items-start">
+                    
+                        <div class="d-grid gap-2 d-md-block">
+                            
+                            
+                            <button class="btn btn-primary" type="button">ENVIAR</button>
+                        </div>
+                        
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!--Modal do Botão forma de pagamento  -->
+            <div class="modal" tabindex="-1" id="mod_fmPagamento">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">FORMA DE PAGAMENTO</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <select class="form-select" aria-label="Default select example" id="sel_modal_fmPagamento">
+                            <option selected> Forma de pagamento: </option>
+                            <option value="1">Dinheiro</option>
+                            <option value="2">Pix</option>
+                            <option value="3">Cartão de Crédito</option>
+                            <option value="4">Cartão de Débito</option>
+                            <option value="5">Boleto</option>
+                            <option value="6">Cheque</option>
+                            <option value="7">Promissória</option>
+                            <option value="8">Mista</option>
+                          </select>
+
+                      <p>Teste de Modal OK</p>
+
+                      <div id="mdl_pagamentoMisto" style="display: none;">
+
+                            <label>1° FORMA DE PAGAMENTO:</label>
+                            <select class="form-select" aria-label="Default select example" id="sel_pagMisto1">
+                                <option selected> Forma de pagamento: </option>
+                                <option value="11">Dinheiro</option>
+                                <option value="12">Pix</option>
+                                <option value="13">Cartão de Crédito</option>
+                                <option value="14">Cartão de Débito</option>
+                                <option value="15">Boleto</option>
+                                <option value="16">Cheque</option>
+                                <option value="17">Promissória</option>
+                            </select> <br>
+
+                            <label>2° FORMA DE PAGAMENTO:</label>
+                            <select class="form-select" aria-label="Default select example" id="sel_pagMisto2">
+                                <option selected> Forma de pagamento: </option>
+                                <option value="11">Dinheiro</option>
+                                <option value="12">Pix</option>
+                                <option value="13">Cartão de Crédito</option>
+                                <option value="14">Cartão de Débito</option>
+                                <option value="15">Boleto</option>
+                                <option value="16">Cheque</option>
+                                <option value="17">Promissória</option>
+
+                            </select>
+
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">FECHAR</button>
+                      <button type="button" class="btn btn-primary">SALVAR</button>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+
+            <div id="principal_1" class="table-responsive">
+                <table class="table table-striped table-hover" id="tabela_controle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DATA</th> 
+                            <th>DESCRIÇÃO</th>
+                            <th>TIPO</th>
+                            <th>FORMA DE PAGAMENTO</th>
+                            <th>VALOR (R$)</th>
+                            <th>OBSERVAÇÃO</th>
+                            
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="info-tdIdControle">001</td>
+                            <td class="info-tdDataControle">17/07/2022</td> 
+                            <td class="info-tdDescricaoControle"> Salario de Alane/ JUL</td>
+                            <td class="info-tdTipoControle">Salario</td>
+                            <td class="info-tdformaPagamentoControle">Pix</td>
+                            <td class="info-tdValorControle"> 1121,20</td>
+                            <td class="info-tdObservacaoControle">Resta pagamento do transporte</td>
+                        </tr>
+                        <tr>
+                            <td class="info-tdIdControle">001</td>
+                            <td class="info-tdDataControle">17/07/2022</td> 
+                            <td class="info-tdDescricaoControle"> Salario de Fellipe/ JUL</td>
+                            <td class="info-tdTipoControle">Salario</td>
+                            <td class="info-tdformaPagamentoControle">Pix</td>
+                            <td class="info-tdValorControle"> 1121,20</td>
+                            <td class="info-tdObservacaoControle">Resta pagamento do transporte</td>
+                        </tr>
+                     
+                        
+
+
+
+                    </tbody>
+                    
+                </table>
+            </div>
+
+            <button class="btn btn-primary" type="button" id="btn-tbHortifruti">TABELA DO HORTIFRUT</button>  
+            <div id="principal_1" class="table-responsive">
+
+
+
+                <table class="table table-striped table-hover" style="display:none ;"  id="tabela_hortifruti">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DESCRIÇÃO</th> 
+                            <th>ESTOQUE </th>
+                            <th>MEDIDA</th>
+                            <th>RISCO</th>
+                            <th>VALOR (R$)</th>
+                            <th>TAXA DE LUCRO (%)</th>
+                            <th>REVENDA (R$)</th>
+                            <th></th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="info-tdId">001</td>
+                            <td class="info-tdDescricao">Laranja</td> 
+                            <td class="info-tdEstoque">5</td>
+                            <td class="info-tdMedida">Kg</td>
+                            <td class="info-tdRisco"> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>                                   
+                            </td>
+                            <td class="info-tdValor"> 0.58</td>
+                            <td class="info-tdPorcentagem">60</td>
+                            <td class="info-tdRevenda">1.45</td>
+                            <td class="info-tdEditar"> <button type="submit"  class="btn btn-warning btn-sm"> EDITAR</button> </td>
+                        </tr>
+
+                        <tr>
+                            <td class="info-tdId">002</td>
+                            <td class="info-tdDescricao"> Tangerina Ponka</td> 
+                            <td class="info-tdEstoque">2</td>
+                            <td class="info-tdMedida">Kg</td>
+                            <td class="info-tdRisco"> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>                                   
+                            </td>
+                            <td class="info-tdValor"> 1.46</td>
+                            <td class="info-tdPorcentagem">60</td>
+                            <td class="info-tdRevenda">2.34</td>
+                            <td class="info-tdEditar"> <button type="submit"  class="btn btn-warning btn-sm"> EDITAR</button> </td>
+                        </tr>
+
+                        <tr>
+                            <td class="info-tdId">003</td>
+                            <td class="info-tdDescricao"> Vargem</td> 
+                            <td class="info-tdEstoque">1</td>
+                            <td class="info-tdMedida">Kg</td>
+                            <td class="info-tdRisco"> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>                                   
+                            </td>
+                            <td class="info-tdValor"> 5.00</td>
+                            <td class="info-tdPorcentagem">60</td>
+                            <td class="info-tdRevenda">9.75</td>
+                            <td class="info-tdEditar"> <button type="submit"  class="btn btn-warning btn-sm"> EDITAR</button> </td>
+                        </tr>
+
+                    </tbody>
+                    
+                </table>
+                
+           
+            
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
